@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading,
+.subHeading {
+    margin: 2px;
+    padding: 3px;
+}
+
+.subHeading {
+    max-width: 500px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: sans-serif;
+    column-rule: black;
+}
+
+.boxCont {
+    padding: 1px;
+    margin: 2px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid #000000;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.456);
+    transition: width 2s ease-in-out;
+}
+
+.box:hover {
+    width: 500px;
+}

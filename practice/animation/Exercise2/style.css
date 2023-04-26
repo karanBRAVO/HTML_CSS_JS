@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.heading,
+.subHeading {
+    padding: 2px;
+    margin: 2px;
+}
+
+.subHeading {
+    max-width: 500px;
+}
+
+.boxCont {
+    padding: 2px;
+    margin: 1px;
+    max-width: 520px;
+}
+
+.boxDim {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+.box1 {
+    background-color: slateblue;
+    transition: width 2s ease-in-out;
+}
+
+.box2 {
+    background-color: skyblue;
+    transition: width 1s ease-in-out;
+    transition-delay: 2s;
+}
+
+.boxCont:hover .box1 {
+    width: 500px;
+}
+
+.boxCont:hover .box2 {
+    width: 500px;
+}

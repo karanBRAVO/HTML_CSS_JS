@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    background-color: aliceblue;
+}
+
+.innerContainer {
+    flex-direction: row;
+    animation-name: HideBox;
+    animation-duration: 13s;
+    opacity: 0;
+    display: flex;
+}
+
+@keyframes HideBox {
+
+    0%,
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+p {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    padding-left: 22px;
+}
+
+.p--letterSpacing22 {
+    letter-spacing: 22.5px;
+    animation: changeOpacity ease-in-out;
+}
+
+.p--letterSpacing5 {
+    letter-spacing: 5.5px;
+}
+
+.p1 {
+    animation-duration: 4s;
+    background-color: rgba(220, 20, 60, 0.745);
+}
+
+.p2 {
+    animation-duration: 5s;
+    background-color: rgba(216, 191, 216, 0.788);
+}
+
+.p3 {
+    animation-duration: 6s;
+    background-color: rgba(255, 99, 71, 0.752);
+}
+
+.p4 {
+    animation-duration: 7s;
+    background-color: rgba(0, 255, 128, 0.751);
+}
+
+.p5 {
+    animation-duration: 8s;
+    background-color: rgba(135, 207, 235, 0.723);
+}
+
+.p6 {
+    animation-duration: 9s;
+    background-color: rgba(46, 139, 86, 0.76);
+}
+
+.p7 {
+    animation-duration: 10s;
+    background-color: rgba(255, 217, 0, 0.738);
+}
+
+@keyframes changeOpacity {
+
+    0%,
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.p8 {
+    animation: moveLeftLate 9s linear;
+    transform: rotateZ(90deg);
+    margin: 5px;
+}
+
+@keyframes moveLeftLate {
+    from {
+        transform: translateX(500px);
+    }
+
+    to {
+        transform: translateX(0px);
+        transform: rotateZ(90deg);
+    }
+}
+
+.dropDim {
+    width: 29.5px;
+    height: 29.5px;
+    border-radius: 50%;
+    margin: 5px;
+    position: absolute;
+    top: 46.5%;
+    opacity: 0;
+    animation-name: dropDown;
+}
+
+.drop1 {
+    background-color: rgba(220, 20, 60, 0.745);
+    left: 23.67%;
+    animation-duration: 3s;
+}
+
+.drop2 {
+    background-color: rgba(216, 191, 216, 0.788);
+    left: 30.9%;
+    animation-duration: 4s;
+}
+
+.drop3 {
+    background-color: rgba(255, 99, 71, 0.752);
+    left: 37.58%;
+    animation-duration: 5s;
+}
+
+.drop4 {
+    background-color: rgba(0, 255, 128, 0.751);
+    left: 44.58%;
+    animation-duration: 6s;
+}
+
+.drop5 {
+    background-color: rgba(135, 207, 235, 0.723);
+    left: 51.34%;
+    animation-duration: 7s;
+}
+
+.drop6 {
+    background-color: rgba(46, 139, 86, 0.76);
+    left: 58.35%;
+    animation-duration: 8s;
+}
+
+.drop7 {
+    background-color: rgba(255, 217, 0, 0.738);
+    left: 65.55%;
+    animation-duration: 9s;
+}
+
+@keyframes dropDown {
+    from {
+        transform: translateY(-500px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 0.25;
+    }
+}
+
+.secCont {
+    animation-name: showBox;
+    animation-duration: 14s;
+    font-size: 5em;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+
+@keyframes showBox {
+
+    0%,
+    90% {
+        opacity: 0;
+        font-size: 1.5em;
+    }
+
+    95% {
+        font-size: 1.5em;
+    }
+
+    100% {
+        opacity: 1;
+        font-size: 5em;
+    }
+}
+
+.finalP {
+    color: black;
+    transform: rotateZ(90deg);
+}

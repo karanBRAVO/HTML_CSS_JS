@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2px;
+  /* background-color: chartreuse; */
+}
+
+.container-svg {
+  border: 2px solid gainsboro;
+  border-radius: 70px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+  margin-top: 8vh;
+  padding: 3px;
+  /* background-color: burlywood; */
+}
+.container-svg:hover {
+  opacity: 0;
+}
+
+#BGElement {
+  animation-name: changeColor;
+  animation-duration: 3s;
+  animation-delay: 5ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+@keyframes changeColor {
+  0% {
+    fill: #6c63ff;
+  }
+  50% {
+    fill: #ff6f6f;
+  }
+  100% {
+    fill: #6fffa6;
+  }
+}
+
+#SoccerBall {
+  animation-name: movementOfSoccerBall;
+  animation-duration: 3s;
+  animation-delay: 5ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-timing-function: ease-out;
+}
+@keyframes movementOfSoccerBall {
+  0% {
+    transform: none;
+    fill: #6c63ff;
+  }
+  50% {
+    transform: translateY(-144px);
+    fill: #ff6f6f;
+  }
+  100% {
+    transform: translateY(20px);
+    fill: #6fffa6;
+  }
+}
+
+#Vector_8 {
+  animation-name: changeColor;
+  animation-duration: 3s;
+  animation-delay: 5ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+@keyframes changeColor {
+  0% {
+    fill: #6c63ff;
+  }
+  50% {
+    fill: #ff6f6f;
+  }
+  100% {
+    fill: #6fffa6;
+  }
+}
+
+#Vector_9 {
+  animation-name: changeColor;
+  animation-duration: 3s;
+  animation-delay: 5ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+@keyframes changeColor {
+  0% {
+    fill: #6c63ff;
+  }
+  50% {
+    fill: #ff6f6f;
+  }
+  100% {
+    fill: #6fffa6;
+  }
+}
+
+#Vector_13 {
+  animation-name: changeColor;
+  animation-duration: 3s;
+  animation-delay: 5ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+@keyframes changeColor {
+  0% {
+    fill: #6c63ff;
+  }
+  50% {
+    fill: #ff6f6f;
+  }
+  100% {
+    fill: #6fffa6;
+  }
+}
+
+#Shoe {
+  animation-name: movementOfShoe;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 5ms;
+  animation-direction: normal;
+  animation-play-state: running;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+@keyframes movementOfShoe {
+  0% {
+    transform: rotate(7deg);
+  }
+  70% {
+    transform: rotate(-2deg);
+  }
+}
+
+#RightHand {
+  animation-name: movementOfRightHand;
+  animation-duration: 3s;
+  animation-delay: 5ms;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-direction: alternate;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+@keyframes movementOfRightHand {
+  0% {
+    transform: rotate(-5deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+}
+
+#LeftHand {
+  animation-name: movementOfLeftHand;
+  animation-duration: 3s;
+  animation-delay: 5ms;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-direction: alternate;
+  transform-origin: top left;
+  transform-box: fill-box;
+}
+@keyframes movementOfLeftHand {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}

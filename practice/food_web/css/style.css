@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.mr {
+  margin: 2px;
+}
+.pd {
+  padding: 3px;
+}
+.cl-wh {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+.bg_cl {
+  background-color: rgba(126, 123, 123, 0.739);
+  border-radius: 3px;
+}
+.wd_ht {
+  width: 40px;
+  height: 45px;
+}
+.ds {
+  display: flex;
+  flex-direction: row;
+}
+.or {
+  justify-content: center;
+  align-items: center;
+}
+.dsg {
+  background-color: rgba(126, 123, 123, 0.465);
+  display: grid;
+  grid-template-columns: repeat(3, 206px);
+  grid-template-rows: repeat(1, 140px);
+  text-align: center;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+}
+.img-sz {
+  width: 142px;
+  height: 120px;
+  margin: 10px 4px;
+  padding: 2px 2px;
+  border-radius: 7px;
+}
+body {
+  background-color: rgb(53 62 71);
+  visibility: visible;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  background: url(../img/bg_food.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  backface-visibility: visible;
+}
+.navigation {
+  background-color: rgba(126, 123, 123, 0.739);
+  display: flex;
+  flex-direction: row;
+}
+.topdiv1 {
+  margin: 1px 10px;
+  padding: 1px 4px;
+}
+.name {
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+  font-family: monospace;
+  font-variant: small-caps;
+  font-stretch: ultra-expanded;
+}
+.topdiv2 {
+  margin: 1px 10px;
+  padding: 4px 4px;
+  margin-left: 400px;
+}
+.ul {
+  display: flex;
+  flex-direction: row;
+  font-stretch: ultra-expanded;
+  font-variant: small-caps;
+  font-size: 1em;
+}
+.ul li {
+  margin: 0 4px;
+  padding: 1px 3px;
+  color: white;
+}
+.top_container {
+  background-color: rgba(131, 131, 131, 0.363);
+  margin-left: 70px;
+  margin-top: 213px;
+  padding: 1px;
+  width: 191px;
+  height: fit-content;
+  border-radius: 3px;
+  text-align: center;
+}
+.tp_line {
+  color: white;
+  margin: 2px 0;
+  padding: 1px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+.btn_menu {
+  color: rgba(255, 230, 0, 0.794);
+  border: 2px solid #ffe600d0;
+  border-radius: 5px;
+  font: 16px sans-serif;
+  font-weight: 500;
+  margin: 3px;
+  padding: 3px;
+  cursor: pointer;
+  background-color: #424c56;
+}
+.btn_menu:hover {
+  border: 2px solid yellow;
+  color: yellow;
+}
+.menu {
+  height: 100vh;
+  width: 100%;
+}
+.menu_div {
+  text-align: center;
+  margin: 40px 0;
+}
+.heading {
+  color: rgb(255, 255, 255);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-variant-caps: petite-caps;
+  margin: 2px;
+  padding: 3px;
+}
+.images {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 274px);
+  grid-template-rows: repeat(2, 247px);
+}
+.order_now {
+  position: relative;
+}
+.food_img {
+  width: 207px;
+  height: 201px;
+  margin: 7px 10px;
+  padding: 0px;
+  text-align: center;
+  border-radius: 130px;
+  border: 2px solid white;
+  opacity: 1;
+}
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.order_btn {
+  font-size: 19px;
+  color: white;
+  background-color: rgb(248, 139, 157);
+  border-radius: 5px;
+  border: 2px solid rgb(248, 139, 157);
+  font-weight: 500;
+  margin: 3px;
+  padding: 4px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+.order_now:hover .food_img {
+  opacity: 0.5;
+}
+.order_now:hover .middle {
+  opacity: 1;
+}
+.add_bt {
+  margin: 80px 0;
+  width: 100%;
+  height: 224px;
+}
+.footer {
+  height: 100vh;
+}
+.foot {
+  margin: 35px;
+  padding: 25px;
+}
+#pay_page {
+  background-color: rgba(126, 123, 123, 0.739);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+}
+#pay_page div {
+  background-color: white;
+  width: 592px;
+  height: 412px;
+  text-align: center;
+  border: 2px solid white;
+  box-shadow: 3px 3px 3px #807a7a;
+  border-radius: 5px;
+}

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>FoodCart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_login.css">
+</head>
+
+<body id="top">
+
+    <div class="container">
+        <div class="navigation">
+            <div class="topdiv1">
+                <a href="#top">
+                    <p class="name">FoodCart</p>
+                </a>
+            </div>
+            <div class="topdiv2">
+                <nav class="Navbar">
+                    <ul class="ul">
+                        <a href="#">
+                            <li class="tp-links">Services</li>
+                        </a>
+                        <a href="#">
+                            <li class="tp-links">Contact Us</li>
+                        </a>
+                        <a href="#">
+                            <li class="tp-links">About Us</li>
+                        </a>
+                        <li class="tp-links">
+                            <p style="cursor: pointer;" onclick="login()">login</p>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="top_container">
+            <p class="tp_line">“A fit, healthy body that is the best fashion statement”
+                ― Jess C Scott</p>
+            <a href="#Menu"><button class="btn_menu">Menu</button></a>
+            <a href="#items"><button class="btn_menu">Food</button></a>
+        </div>
+    </div>
+    <section class="menu" id="Menu">
+        <div class="menu_div">
+            <p class="heading">Menu</p>
+        </div>
+    </section>
+
+    <!-- pay_page -->
+    <div id="pay_page" class="ds or">
+        <div>
+            <p id="close"
+                style="font-size: 15px;color: black;cursor: pointer;border: 2px solid black;border-radius: 20px;margin: 2px;padding: 3px 6px;width: fit-content;font-weight: 600;"
+                onclick="Close()">X</p>
+            <img src="" alt="">
+            <p>Price: 100</p>
+            <p>Number of items: </p>
+            <p>delivery charges: 3</p>
+            <p>Amount: </p>
+            <button class="order_btn">Order</button>
+        </div>
+    </div>
+
+    <!-- Food Items -->
+    <div class="fooditems" id="items">
+        <div class="menu_div">
+            <div class="bg_cl">
+                <p class="heading">Breakfast</p>
+                <p class="cl-wh">Hope makes a good breakfast. Eat plenty of it.</p>
+            </div>
+            <div class="images">
+                <div class="order_now">
+                    <img src="img/mango_lassi.png" alt="mango lassi" class="food_img" id="food-img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Mango lassi</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/green_chilli_thecha.png" alt="green chilli thecha" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Green Chilli Thecha</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/filter_coffee.png" alt="filter coffee" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Filter Coffee</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/oats-upma.png" alt="oats upma" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">oats Upma</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/aloo-paratha.png" alt="Aloo Paratha" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">aloo Paratha</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/multigrain-methi-thepla.png" alt="Multigrain Methi Thepla" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Multigrain Methi Thepla</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu_div">
+            <div class="bg_cl">
+                <p class="heading">Lunch</p>
+                <p class="cl-wh">You should believe in stopping work and eating lunch.</p>
+            </div>
+
+            <div class="images">
+                <div class="order_now">
+                    <img src="img/chicken_sandwich.png" alt="Chicken sandwich" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Chicken Sandwich</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/Chapati-Chicken-curry-Salad.png"
+                        alt="Chapati, steamed chicken curry and mixed vegetable salad" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Chapati, steamed chicken curry</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/masala_poha.png" alt="Masala poha" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Masala Poha</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/rajma.png" alt="Red kidney beans or rajma" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Rajma</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/Moong-Dal-Khichdi.png" alt="Moong dal khichdi" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Moong Dal Khichdi</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/peas_pulao.png" alt="Peas pulao with carrot raita" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">peas pulao</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu_div">
+            <div class="bg_cl">
+                <p class="heading">Dinner</p>
+                <p class="cl-wh">Dinner is better when we eat together!</p>
+            </div>
+
+            <div class="images">
+                <div class="order_now">
+                    <img src="img/Sambar.png" alt="sambar" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Sambar</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/fried-rice.png" alt="fried rice" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Fried rice</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/Paneer-Tikka-Masala.png" alt="paneer" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Paneer Tikka</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/chana-masala.png" alt="chana Masala" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Chana</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/vegetable-soup.png" alt="vegetable soup" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Veg Soup</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/cauliflower-curry.png" alt="cauliflower curry" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Cauliflower Curry</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu_div">
+            <div class="bg_cl">
+                <p class="heading">Dessert</p>
+                <p class="cl-wh">Let's have Dessert!</p>
+            </div>
+
+            <div class="images">
+                <div class="order_now">
+                    <img src="img/gulab_jamun.png" alt="Gulab jamun" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Gulab jamun</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/gajar_ka_halwa.png" alt="Gajar ka halwa" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Gajar ka Halwa</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/sandesh.png" alt="sandesh" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Sandesh</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/aam_shrikhand.png" alt="aam shrikhand" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">AAm Shreekhand</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/kulfi.png" alt="kulfi" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Kulfi</p>
+                </div>
+                <div class="order_now">
+                    <img src="img/ghevar.png" alt="Malai Ghevar" class="food_img">
+                    <div class="middle">
+                        <button class="order_btn" onclick="newScreen()">Order Now</button>
+                    </div>
+                    <p class="cl-wh">Ghevar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="add_bt">
+        <div class="dsg">
+            <div class="wd_ht">
+                <img src="img/zomato.png" alt="zomato" class="img-sz">
+            </div>
+            <div class="wd_ht">
+                <img src="img/swiggy.png" alt="swiggy" class="img-sz">
+            </div>
+            <div class="wd_ht">
+                <img src="img/uber.png" alt="uber" class="img-sz">
+            </div>
+        </div>
+    </div>
+    <footer class="footer ds or">
+        <div class="foot">
+            <div class="ds or">
+                <img src="" alt="facebook">
+                <p class="cl-wh mr pd">facebook</p>
+            </div>
+            <div class="ds or">
+                <img src="" alt="twitter">
+                <p class="cl-wh mr pd">twitter</p>
+            </div>
+            <div class="ds or">
+                <img src="" alt="telegram">
+                <p class="cl-wh mr pd">telegram</p>
+            </div>
+        </div>
+        <div class="bg_cl">
+            <p class="cl-wh mr pd">since-1990</p>
+            <p class="cl-wh mr pd">All Rights Reserved.</p>
+            <p class="cl-wh mr pd">&copy; www.FoodCart.com (011-200-90)</p>
+        </div>
+    </footer>
+
+    <!-- login -->
+    <div class="sec ds or" id="login_food">
+        <div>
+            <div>
+                <p style="font-size: 15px;color: black;cursor: pointer;border: 2px solid black;border-radius: 20px;margin: 2px;padding: 3px 6px;width: fit-content;font-weight: 600;background-color: white;" onclick="clsLogin()">
+                    X</p>
+            </div>
+        </div>
+        <div class="mainContainer">
+            <div class="division1" id="division1">
+                <div class="signInContainer" id="signInContainer">
+                    <img src="img/login.png" alt="Login Page" class="img">
+                    <form action="#" class="formS">
+                        <input type="text" name="name" autocomplete="off" placeholder="Name *" class="input" required>
+                        <input type="email" name="email" id="email" class="input" autocomplete="off"
+                            placeholder="Email *" required>
+                        <input type="tel" name="tel" id="mNumber" class="input" autocomplete="off"
+                            placeholder="Mobile number *" required>
+                        <button type="button" class="btn" id="submitBtnS">Sign In</button>
+                    </form>
+                    <p style="color: black;margin-top: 4px;font-family: monospace;font-size: 17px;">or</p>
+                    <button class="gSgn"><img src="img/google.png" alt="" class="gImg"> continue with Google</button>
+                </div>
+                <div class="title-displayL" id="tpDisplayL">
+                    <h2 id="heading">Welcome to Login Page</h2>
+                    <button class="tpBtn" onclick="revertL()" id="tpBtn">Sign In</button>
+                </div>
+
+            </div>
+            <div class="division2" id="division2">
+                <div id="loginContainer">
+                    <img src="img/login.png" alt="Login Page" class="img">
+                    <form action="#" class="formL" id="formL">
+                        <input type="text" name="username" id="username" autocomplete="off" placeholder="Username *"
+                            class="input" required>
+                        <input type="password" name="password" id="password" autocomplete="off" placeholder="Password *"
+                            class="input" required>
+                        <div style="margin-top: 7px;">
+                            <input type="checkbox" name="Remember" id="RememberMe">
+                            <label for="Remember me" id="rmbr">Remember me</label>
+                        </div>
+                        <button type="button" class="btn" id="submitBtnL">Login</button>
+                    </form>
+                </div>
+                <div class="title-displayS" id="tpDisplayS">
+                    <h2 id="heading">Welcome to Sign In Page</h2>
+                    <button class="tpBtn" onclick="revertS()" id="tpBtn">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/index1.js"></script>
+</body>
+
+</html>

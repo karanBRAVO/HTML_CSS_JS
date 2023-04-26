@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+.NavBar {
+    height: 12.5vh;
+}
+
+.NavBar,
+nav {
+    background-color: #222;
+    padding: 5px;
+    width: 100%;
+}
+
+.NavBar nav ul {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.NavBar nav ul li {
+    padding: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: 800;
+    font-size: 0.9em;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.1px;
+    text-transform: capitalize;
+    transition: all 0.5s;
+}
+
+.NavBar nav ul li:hover {
+    background-color: #2f2;
+    font-size: 1.1em;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid #000;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .outerBox {
+    border-radius: 3px;
+    border: 2px solid aliceblue;
+    box-shadow: 0 0 8px rgba(28, 27, 27, 0.844);
+    width: 60%;
+    height: 70%;
+    padding: 4px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.netflix {
+    width: 9rem;
+    height: 15rem;
+    border-right: 3rem solid #e50913;
+    border-left: 3rem solid #e50913;
+}
+
+.netflix::before {
+    content: '';
+    background-color: #e50913;
+    position: absolute;
+    width: 3.08rem;
+    height: 15rem;
+    transform: skewX(21deg);
+    box-shadow: 0 0 10px #000;
+}
+
+.git {
+    background-color: #f05033;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10px;
+    transform: rotateZ(45deg);
+}
+
+.git .line1 {
+    background-color: #ffffff;
+    width: 0.7rem;
+    height: 5.11rem;
+    position: relative;
+    transform: rotateZ(-90deg);
+    left: 32.5px;
+}
+
+.git .line1::before {
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-top: 14px;
+    margin-left: -7px;
+}
+
+.git .line1::after {
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-top: 62px;
+    margin-left: -7px;
+}
+
+.git .line2 {
+    background-color: #ffffff;
+    width: 0.7rem;
+    height: 4rem;
+    position: relative;
+    top: -47px;
+    left: 44px;
+    transform: rotateZ(-50deg);
+}
+
+.git .line2::before {
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-top: 48px;
+    margin-left: -7px;
+}
+
+.youtube {
+    background-color: #fe0002;
+    border: 2px solid #fe0002;
+    box-shadow: 0px 0px 0px 7px #fe0002;
+    width: 10rem;
+    height: 6.5rem;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.youtube .triangle_cover {
+    background-color: #fe0002;
+    width: 3.5rem;
+    height: 5.6568542rem;
+    position: relative;
+    left: 9px;
+    z-index: 2;
+}
+
+.youtube .youtube_triangle {
+    background-color: #ffffff;
+    width: 4rem;
+    height: 4rem;
+    transform: rotateZ(45deg);
+    position: relative;
+    right: 28px;
+    z-index: 1;
+}
+
+.figma {
+    display: flex;
+    flex-direction: column;
+}
+
+.figma .figma_top,
+.figma_mid,
+.figma_bottom {
+    width: 150px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.figma .figma_top::before {
+    background-color: #f24e1e;
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 80px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.figma .figma_top::after {
+    background-color: #ff7262;
+    content: '';
+    position: absolute;
+    margin-left: 75px;
+    width: 75px;
+    height: 80px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.figma .figma_mid::before {
+    background-color: #a259ff;
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 80px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.figma .figma_mid::after {
+    background-color: #1abcfe;
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 80px;
+    margin-left: 75px;
+    border-radius: 50%;
+}
+
+.figma .figma_bottom::before {
+    background-color: #0acf83;
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 80px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}

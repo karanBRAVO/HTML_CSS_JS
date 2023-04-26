@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data</title>
+</head>
+
+<body>
+    <div>
+        <h1>Fill the form</h1>
+    </div>
+    <form action="/hbs/form" method="post">
+        <div>
+            <label for="uName">Enter your name:</label>
+            <input type="text" name="uName" id="uName" placeholder="your name" autocomplete="off">
+        </div>
+        <div>
+            <label for="uDOB">Enter your DOB:</label>
+            <input type="date" name="uDob" id="uDOB" autocomplete="off">
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <div>
+        <a href="/hbs/getData">View Data</a>
+        <a href="/hbs/update-data">Update Data</a>
+        <a href="/hbs/delete-data">Delete Data</a>
+    </div>
+</body>
+
+</html>

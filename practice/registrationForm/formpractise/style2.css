@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    /* text-decoration: none; */
+}
+body{
+    /* background-color: rgb(211, 174, 241); */
+    background-image: url(img/background.jpg);
+    opacity: 1;
+}
+h1{
+    /* background-color: rgb(236, 19, 19); */
+    text-align: center;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 8px;
+    color: rgb(255, 255, 255);
+    transition: 1s;
+}
+h1:hover{
+    color: yellowgreen;
+}
+p{
+    font-weight: 700;
+    font-family: sans-serif;
+    color: #000;;
+    text-align: center;
+    color: whitesmoke;
+    margin: 5px;
+    padding: 3px;
+}
+.alert_msg{
+    text-align: center;
+    color: rgba(0, 0, 0, 0);
+}
+.alert_msg:hover{
+    color: red;
+}
+img{
+    width: 8%;
+    height: auto;
+    align-items: center;
+}
+.img_icon{
+    position: absolute;
+    background-color: white;
+    border: 2px solid navy;
+    border-radius: 36px;
+    padding: 5px;
+}
+.img_icon:hover{
+    background-color: rgb(200, 230, 67);
+}
+.images{
+    margin: 5px;
+    padding: 4px;
+}
+.visa{
+    width: 5%;
+    height: auto;
+}
+.american{
+    width: 7%;
+    height: auto;
+}
+.mastercard{
+    width: 8%;
+    height: auto;
+}
+.paypal{
+    width: 10%;
+    height: auto;
+}
+.paytm{
+    width: 5%;
+    height: auto;
+}
+.gpay{
+    width: 8%;
+    height: auto;
+}
+.rupay{
+    width: 8%;
+    height: auto;
+}
+.upi{
+    width: 5%;
+    height: auto;
+}
+.main{
+    font-weight: 900;
+    font-family: cursive;
+    text-align: center;
+    margin: 90px;
+    margin-top: 14px;
+    color: white;
+    background-color: rgba(17, 16, 16, 0.376);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+.method{
+    cursor: pointer;
+}
+.continue_btn{
+    background-color: rgb(72, 235, 235);
+    font-weight: 900;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    margin: 15px;
+    padding: 4px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+.question_link{
+    text-align: center;
+    /* background-color: yellow; */
+    margin: 15px;
+    padding: 5px;
+}
+.message{
+    color: rgba(255, 255, 255, 0);
+    /* font-weight: 900; */
+    /* font-family: serif; */
+    /* font-size: 17px; */
+}
+.foot{
+    text-align: center;
+    font-size: 15px;
+    font-family: cursive;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+}
+.git_img{
+    padding: 5px;
+    width: 5%;
+    height: auto;
+    background-color: rgb(224, 218, 218);
+    border-radius: 4px;
+}

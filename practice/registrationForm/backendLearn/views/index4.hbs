@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete-Data</title>
+</head>
+
+<body>
+    <div>
+        <h1>Delete-Data</h1>
+    </div>
+    <form action="" method="" id="form">
+        <div>
+            <label for="uName">Name:</label>
+            <input type="text" name="uName" id="uName" placeholder="enter your name" autocomplete="off">
+        </div>
+        <div>
+            <button id="btn">Delete</button>
+        </div>
+    </form>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const uName = document.getElementById('uName');
+
+        btn.addEventListener('click', () => {
+            if (uName.value.length > 0) {
+                form.action = `/hbs/delete-data/${uName.value}`;
+                form.method = `post`;
+            }
+            else {
+                form.action = `/hbs/delete-data`;
+                form.method = `get`;
+            }
+        })
+    </script>
+</body>
+
+</html>

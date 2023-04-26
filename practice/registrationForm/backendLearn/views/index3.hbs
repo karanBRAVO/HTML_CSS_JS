@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update-Data</title>
+</head>
+
+<body>
+    <div>
+        <h1>Update-Data</h1>
+    </div>
+    <form action="" method="" id="form">
+        <div>
+            <label for="userOldName">Incorrect Name:</label>
+            <input type="text" name="userOldName" id="userOldName" autocomplete="off" placeholder="enter your name">
+        </div>
+        <div>
+            <label for="userUpdateName">Correct Name:</label>
+            <input type="text" name="updateName" id="userUpdateName" autocomplete="off" placeholder="enter your name">
+        </div>
+        <div>
+            <button id="btn">Update</button>
+        </div>
+    </form>
+
+    <script>
+        const form = document.getElementById("form");
+        const userOldName_inp = document.getElementById("userOldName");
+        const userUpdateName_inp = document.getElementById("userUpdateName");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener('click', () => {
+            if (userOldName_inp.value.length > 0 && userUpdateName_inp.value.length > 0) {
+                form.action = `/hbs/update-data/${userOldName_inp.value}/${userUpdateName_inp.value}`;
+                form.method = `post`;
+            }
+            else {
+                form.action = `/hbs/update-data/`;
+                form.method = `get`;
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: block;
+    background-color: rgb(213, 247, 250);
+}
+.container{
+    background-color: rgb(213, 247, 250);
+    text-align: center;
+}
+h1{
+    padding: 11px;
+    margin: auto;
+    font-family: sans-serif;
+}
+p{
+    padding: 5px;
+    margin: auto;
+    font-size: 16px;
+    font-family: cursive;
+    color: navy;
+}
+.details{
+    border: mintcream;
+    border-radius: 5px;
+    color: black;
+    font-family: fantasy;
+    padding: 4px;
+    width: 400px;
+    margin-top: 11px;
+}
+.gender{
+    margin-top: 8px;
+}
+.submit_btn{
+    background-color: rgb(187, 221, 224);
+    color: rgb(15, 15, 15);
+    padding: 5px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    border: white;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: sans-serif;
+    opacity: 1;
+}
+#msg{
+    margin: 10.9887px 0px 0px;
+    width: 455px;
+    height: 85px;
+}
+.foot{
+    text-align: center;
+    font-size: 15px;
+    font-family: cursive;
+    background-color: rgb(213, 247, 250);
+    padding: 15px;
+    border-radius: 5px;
+}
+.git_img{
+    padding: 5px;
+    width: 4%;
+    height: auto;
+}

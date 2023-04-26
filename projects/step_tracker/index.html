@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Step Tracker</title>
+	<link rel="stylesheet" href="style.css">
+	<script defer src="index.js"></script>
+</head>
+<body>
+	<div id="hiddenLayer"></div>
+	<nav>
+		<div class="nameContainer">
+			<div class="name">
+				<h1>Step Tracker</h1>	
+			</div>
+		</div>
+		<div class="optionsContainer">
+			<div class="imgContainer" id="optionsContainer_imageContainer_button">
+				<img src="share.png" alt="Share">
+			</div>
+			<div class="options" id="optionsContainer_options">
+				<div class="options_innerCont">
+					<div class="option">
+						<div class="option_optionIcon">
+							<img src="gmail.png" alt="">
+						</div>
+						<div class="option_optionName">
+							<h4>Gmail<h4>
+						</div>
+					</div>
+				</div>
+				<div class="options_innerCont">
+					<div class="option">
+						<div class="option_optionIcon">
+							<img src="whatsapp.png" alt="">
+						</div>
+						<div class="option_optionName">
+							<h4>WhatsApp<h4>
+						</div>
+					</div>
+				</div>
+				<div class="options_innerCont">
+					<div class="option">
+						<div class="option_optionIcon">
+							<img src="download.png" alt="">
+						</div>
+						<div class="option_optionName">
+							<h4>download<h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="mainContainer">
+		<div class="linksContainer">
+			<div class="links activeLinkCont" id="dayLink_button">
+				<div class="links_linksInnerCont">
+					<div class="links_linkName">
+						<span class="activeLink" id="daySpan">Day</span>
+					</div>
+				</div>
+			</div>
+			<div class="links" id="weekLink_button">
+				<div class="links_linksInnerCont">
+					<div class="links_linkName">
+						<span class="" id="weekSpan">Week</span>
+					</div>
+				</div>
+			</div>
+			<div class="links" id="monthLink_button">
+				<div class="links_linksInnerCont">
+					<div class="links_linkName">
+						<span class="" id="monthSpan">Month</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="graphContainer">
+			<div class="layer">
+				<div class="layer_topCont" id="layer_topContainer_graphs">
+					
+				</div>
+				<div class="layer_bottomCont" id="layer_bottomContainer_dates">
+					
+				</div>
+			</div>
+			<div class="graph" id="graphBg">
+			
+			</div>
+		</div>
+		<div class="infoContainer">
+			<div class="info">
+				<div class="box">
+					<div class="topBox">
+						<div>
+							<span>4191</span>	
+						</div>
+						<div>
+							<sub>steps</sub>
+						</div>
+					</div>
+					<div class="bottomBox">
+						<div>
+							<h3>Step Count</h3>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="topBox">
+						<div>
+							<span>2.8</span>	
+						</div>
+						<div>
+							<sub>KM</sub>
+						</div>
+					</div>
+					<div class="bottomBox">
+						<div>
+							<h3>Distance</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lastContainer">
+			<div class="lastCont_topContainer">
+				<div class="headingContainer">
+					<h4>Highest single-day record</h4>
+				</div>
+			</div>
+			<div class="lastCont_bottomContainer">
+				<div class="lastCont_container">
+					<div class="container">
+						<span>3/16/2023</span>
+					</div>
+				</div>
+				<div class="lastCont_container">
+					<div class="container">
+						<span>5739</span>
+						<sub>steps</sub>
+					</div>
+				</div>
+				<div class="lastCont_container">
+					<div class="container">
+						<span>3.8</span>
+						<sub>KM</sub>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
+

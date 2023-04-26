@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --mainColor: black;
+    --bgColor: white;
+    --textColor: white;
+    --hoverTextColor: black;
+    --shadowColor: white;
+    --borderColor: white;
+    --headingFontFamily: 'Tilt Prism', cursive;
+    --buttonFontFamily: 'Tilt Warp', cursive;
+    --textFontFamily: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--mainColor);
+    overflow: hidden;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.heading {
+    background-color: var(--mainColor);
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading .head {
+    background-color: var(--mainColor);
+    width: fit-content;
+    padding: 5px;
+    border: 2px solid var(--borderColor);
+    border-radius: 2px;
+    box-shadow: 0 2px 5px var(--shadowColor);
+}
+
+.head p {
+    color: var(--textColor);
+    font-family: var(--headingFontFamily);
+    font-weight: 500;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+}
+
+.boxContainer {
+    background-color: var(--bgColor);
+    width: 100%;
+    padding: 5px;
+}
+
+.boxContainer .innerBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 97.5%;
+    padding: 5px;
+    background-color: var(--mainColor);
+    border-radius: 4px;
+}
+
+.innerBox .leftCont,
+.controllerCont {
+    width: 24%;
+}
+
+.leftCont {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    width: 54%;
+}
+
+.btn {
+    padding: 4px;
+    margin: 2px;
+}
+
+.btn button {
+    padding: 3px 9px;
+    cursor: pointer;
+    border: 1.67px solid var(--borderColor);
+    border-radius: 3px;
+    background-color: var(--mainColor);
+    transition: all 0.7s;
+}
+
+.btn button span {
+    color: var(--textColor);
+    font-family: var(--buttonFontFamily);
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.25s;
+}
+
+.btn button:hover {
+    background-color: var(--bgColor);
+    box-shadow: 0 0 5px var(--shadowColor);
+}
+
+.btn button:hover span {
+    color: var(--hoverTextColor);
+}
+
+.innerContainer {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mainColor);
+    height: 400px;
+    transform-origin: center;
+    transform: rotateZ(180deg);
+}
+
+.arrayCont {
+    padding: 5px;
+    margin: 1px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.subHeadingCont {
+    display: none;
+    padding: 3px;
+    margin: auto;
+}
+
+.subHeadingCont .subHeading {
+    padding: 2px;
+}
+
+.subHeading div {
+    padding: 1px;
+    margin: 1px;
+}
+
+.subHeading div p {
+    color: var(--textColor);
+    font-family: var(--textFontFamily);
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.controllerCont {
+    padding: 5px;
+    margin: 2px;
+}
+
+.controllers {
+    padding: 2px;
+}
+
+.controllers div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.controllerCont .controllers div label {
+    font-family: var(--textFontFamily);
+    font-weight: 500;
+    font-size: 0.9em;
+    color: var(--textColor);
+}
+
+.incDec button {
+    margin-left: 5.56px;
+}
+
+.rodStyle {
+    width: 5px;
+    height: 1px;
+    margin: 0.4px;
+    background-color: yellow;
+    border: 2px solid black;
+    transition: all 0.5s;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 60%;
+    background: transparent;
+    margin-bottom: 6px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    height: 23px;
+    width: 23px;
+    cursor: default;
+    margin-top: -7.2px;
+    border: 1px solid var(--bgColor);
+    background: yellow;
+    box-shadow: 0 0 7px var(--shadowColor);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 10px;
+    border-radius: 1px;
+    border: 1px solid var(--borderColor);
+    background: var(--mainColor);
+    box-shadow: 0 0 7px var(--shadowColor);
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    border-color: transparent;
+}

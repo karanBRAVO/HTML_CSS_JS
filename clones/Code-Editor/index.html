@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <!-- Title -->
+    <title>Code Editor</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Javascript -->
+    <script defer src="./js/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e5b27e83b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/output.js"></script>
+    <script defer src="./js/options.js"></script>
+    <script defer src="./js/editor.js"></script>
+  </head>
+
+  <body>
+    <!-- Fixed container -->
+    <div class="fixedContainer" id="fixedCont" style="display: none;">
+      <div class="innerBox">
+        <div class="header">
+          <div class="nameCont">
+            <h4>settings</h4>
+          </div>
+          <div class="crossIconCont">
+            <i class="fa-solid fa-close" id="closeFixedContBtn"></i>
+          </div>
+        </div>
+        <div class="shortcutContainer" id="shortcutCont_settings" style="display: none;">
+          <div class="options">
+            <h4>ctrl + f</h4>
+            <h5 class="desc">search anything</h5>
+          </div>
+          <div class="options">
+            <h4>ctrl + a</h4>
+            <h5 class="desc">select all</h5>
+          </div>
+          <div class="options">
+            <h4>ctrl + c</h4>
+            <h5 class="desc">copy</h5>
+          </div>
+          <div class="options">
+            <h4>ctrl + v</h4>
+            <h5 class="desc">paste</h5>
+          </div>
+          <div class="options">
+            <h4>ctrl + z</h4>
+            <h5 class="desc">undo</h5>
+          </div>
+        </div>
+        <div class="mainContainer" id="fixed_mainConatainer" style="display: flex;">
+          <div class="leftCont">
+            <div class="items">
+              <h5 class="active" id="changeName_btn">change name</h5>
+            </div>
+            <div class="items">
+              <h5 class="" id="changeFont_btn">
+                change font(all editor window)
+              </h5>
+            </div>
+            <div class="items">
+              <h5 class="" id="changeHtmlSettings_btn">html editor settings</h5>
+            </div>
+            <div class="items">
+              <h5 class="" id="changeCssSettings_btn">css editor settings</h5>
+            </div>
+            <div class="items">
+              <h5 class="" id="changeJsSettings_btn">js editor settings</h5>
+            </div>
+          </div>
+          <div class="rightCont" id="fixed_rightCont">
+            <!-- change name options -->
+            <div
+              class="changeNameCont"
+              style="display: flex"
+              id="fixed_changeNameCont"
+            >
+              <div class="inputCont">
+                <label for="title">Title</label>
+                <input
+                  type="text"
+                  name="titletext"
+                  id="title_inp"
+                  placeholder="title ..."
+                  autocomplete="off"
+                />
+              </div>
+              <div class="inputCont">
+                <label for="owner">owner</label>
+                <input
+                  type="text"
+                  name="ownertext"
+                  id="owner_inp"
+                  placeholder="owner name ..."
+                  autocomplete="off"
+                />
+              </div>
+              <div class="buttonCont">
+                <button id="fixed_okBtn">
+                  <span>ok</span>
+                </button>
+              </div>
+            </div>
+            <!-- change font options -->
+            <div
+              class="changeFontCont"
+              style="display: none"
+              id="fixed_changeFontCont"
+            >
+              <div class="inputCont">
+                <label for="fontColor">Font Color</label>
+                <input
+                  type="text"
+                  name="color"
+                  id="fixed_textColorInp"
+                  placeholder="Enter the color or choose it"
+                  autocomplete="off"
+                />
+                <input type="color" id="fixed_textColorChoose" />
+              </div>
+              <div class="inputCont">
+                <label for="fontSize">Font Size(specify the units)</label>
+                <input
+                  type="text"
+                  placeholder="Enter the font size"
+                  id="fixed_fontSizeInp"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="inputCont">
+                <label for="fontFamily">Font Family</label>
+                <select
+                  id="fixed_selectFontFamily"
+                  style="font-family: 'Courier New', Courier, monospace"
+                >
+                  <option
+                    value="'Courier New', Courier, monospace"
+                    style="font-family: 'Courier New', Courier, monospace"
+                  >
+                    Monospace
+                  </option>
+                  <option
+                    value="'Noto Sans Tagbanwa', sans-serif"
+                    style="font-family: 'Noto Sans Tagbanwa', sans-serif"
+                  >
+                    Noto Sans Tagbanwa
+                  </option>
+                  <option
+                    value="'Montserrat', sans-serif"
+                    style="font-family: 'Montserrat', sans-serif"
+                  >
+                    Montserrat
+                  </option>
+                  <option
+                    value="'Kanit', sans-serif"
+                    style="font-family: 'Kanit', sans-serif"
+                  >
+                    Kanit
+                  </option>
+                  <option
+                    value="'Fira Sans', sans-serif"
+                    style="font-family: 'Fira Sans', sans-serif"
+                  >
+                    Fira Sans
+                  </option>
+                  <option
+                    value="'Hind Siliguri', sans-serif"
+                    style="font-family: 'Hind Siliguri', sans-serif"
+                  >
+                    Hind Siliguri
+                  </option>
+                </select>
+              </div>
+              <div class="buttonCont">
+                <button id="fixed_applyBtn">
+                  <span>apply</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="Navbar">
+      <div class="leftContainer">
+        <div class="logoContainer">
+          <i class="fa-solid fa-cubes"></i>
+        </div>
+        <div class="nameContainer">
+          <div class="headingContainer">
+            <div class="heading">
+              <h2 id="projectNameTag" title="set title and owner name">
+                Untitled
+              </h2>
+              <i class="fa-solid fa-pencil"></i>
+            </div>
+          </div>
+          <div class="subheadingContainer">
+            <div class="subheading">
+              <h4 id="ownerNameTag">Karan Yadav</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightContainer">
+        <div class="boxContainer">
+          <div class="buttonBox" id="nav_saveBtn">
+            <i class="fa-solid fa-cloud hover"></i>
+            <span>save</span>
+            <div class="saveOptionsContainer" id="saveOptionsCont" style="display: none;">
+              <div class="options">
+                <span id="downloadSepFile_dropDown">download in seperate files</span>
+              </div>
+              <div class="options">
+                <span id="saveLocally_dropDown">save all (locally)</span>
+              </div>
+              <div class="options">
+                <span id="downloadSingleFile_dropDown">download in single file</span>
+              </div>
+            </div>
+          </div>
+          <div class="buttonBox" id="settingsBtn_nav">
+            <i class="fa-solid fa-gear hover"></i>
+            <span>settings</span>
+          </div>
+          <div class="buttonBox" id="toggleLayoutBtn">
+            <i
+              class="fa-solid fa-list hover rotate-90deg"
+              id="toggleLayout"
+            ></i>
+            <div
+              class="layoutOptionsCont"
+              id="layoutOptionsContainer"
+              style="display: none"
+            >
+              <div class="heading">
+                <p>Change layout</p>
+              </div>
+              <div class="layoutOptions">
+                <i
+                  class="fa-solid fa-list rotate-0deg"
+                  id="editor_left"
+                  title="left oriented"
+                ></i>
+                <i
+                  class="fa-solid fa-list rotate-90deg"
+                  id="editor_top"
+                  title="top oriented"
+                ></i>
+                <i
+                  class="fa-solid fa-list rotate-180deg"
+                  id="editor_right"
+                  title="right oriented"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div class="buttonBox" id="thumbTackDropDown_nav">
+            <i class="fa-solid fa-thumbtack hover"></i>
+            <i class="fa-solid fa-chevron-down hover"></i>
+            <div class="showOptionsContainer" style="display: none;" id="thumbTackDropDown_options">
+              <div class="box" id="showShortcuts_Btn">
+                <span>shortcuts</span>
+              </div>
+              <div class="box">
+                <span>format all</span>
+              </div>
+            </div>
+          </div>
+          <div class="buttonBox" style="cursor: default;" title="Hello user">
+            <i class="fa-solid fa-user-ninja hover"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="editorDiv" style="flex-direction: column">
+      <!-- Editor window -->
+      <section class="editSec">
+        <div class="window">
+          <div class="editor" id="editor">
+            <!-- HTML Code editor -->
+            <div class="editinCont" id="htmlContainer">
+              <div class="innerTopContainer" id="htmlInnerContainer">
+                <div
+                  class="name"
+                  id="htmlNameContainer"
+                  title="double click to expand"
+                >
+                  <img
+                    src="./assets/html.svg"
+                    class="icons drag-false"
+                    id="htmlImg"
+                  />
+                  <p id="htmlName">html</p>
+                </div>
+                <div class="optionsContainer" id="htmlOptionCont">
+                  <div class="settingContainer">
+                    <i
+                      class="fa-solid fa-gear"
+                      id="htmlCode_settingBtn"
+                      title="only html editor settings"
+                    ></i>
+                    <i
+                      class="fa-solid fa-chevron-down"
+                      id="htmlCode_downBtn"
+                    ></i>
+                    <div
+                      class="showOptions"
+                      style="display: none"
+                      id="htmlCodeDown_showOptions_down"
+                    >
+                      <div class="innerCont">
+                        <div class="htmlCodeOptionsDown checkBox" id="notepad_htmlCode_Btn">
+                          <span>Notepad</span>
+                        </div>
+                        <div class="htmlCodeOptionsDown" id="highlightHtmlCode_Btn">
+                          <span>Highlight</span>
+                        </div>
+                        <div
+                          class="htmlCodeOptionsDown"
+                          id="expandHtmlEditorWindow_Btn"
+                        >
+                          <span>Expand</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="editWindow">
+                <div class="lineNumberContainer" id="htmlLineNumberContainer">
+                  <div class="innerCont">
+                    <span>1</span>
+                  </div>
+                </div>
+                <textarea
+                  style="
+                    color: #9e9e9e;
+                    font-size: 0.9em;
+                    font-family: 'Courier New', Courier, monospace;
+                  "
+                  name="code"
+                  id="htmlCode"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+            </div>
+            <!-- CSS code editor -->
+            <div class="editinCont" id="cssContainer">
+              <div class="innerTopContainer" id="cssInnerContainer">
+                <div
+                  class="name"
+                  id="cssNameContainer"
+                  title="double click to expand"
+                >
+                  <img
+                    src="./assets/css.svg"
+                    class="icons drag-false"
+                    id="cssImg"
+                  />
+                  <p id="cssName">css</p>
+                </div>
+                <div class="optionsContainer" id="cssOptionCont">
+                  <div class="settingContainer">
+                    <i
+                      class="fa-solid fa-gear"
+                      id="cssCode_settingBtn"
+                      title="only css editor settings"
+                    ></i>
+                    <i
+                      class="fa-solid fa-chevron-down"
+                      id="cssCode_downBtn"
+                    ></i>
+                    <div
+                      class="showOptions"
+                      style="display: none"
+                      id="cssCodeDown_showOptions_down"
+                    >
+                      <div class="innerCont">
+                        <div class="cssCodeOptionsDown checkBox" id="notepad_cssCode_Btn">
+                          <span>Notepad</span>
+                        </div>
+                        <div class="cssCodeOptionsDown" id="highlightCssCode_Btn">
+                          <span>Highlight</span>
+                        </div>
+                        <div
+                          class="cssCodeOptionsDown"
+                          id="expandCssEditorWindow_Btn"
+                        >
+                          <span>Expand</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="editWindow">
+                <div class="lineNumberContainer" id="cssLineNumberContainer">
+                  <div class="innerCont">
+                    <span>1</span>
+                  </div>
+                </div>
+                <textarea
+                  style="
+                    color: #9e9e9e;
+                    font-size: 0.9em;
+                    font-family: 'Courier New', Courier, monospace;
+                  "
+                  name="code"
+                  id="cssCode"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+            </div>
+            <!-- Js code editor -->
+            <div class="editinCont" id="jsContainer">
+              <div class="innerTopContainer" id="jsInnerContainer">
+                <div
+                  class="name"
+                  id="jsNameContainer"
+                  title="double click to expand"
+                >
+                  <img
+                    src="./assets/js.svg"
+                    class="icons drag-false"
+                    id="jsImg"
+                  />
+                  <p id="jsName">js</p>
+                </div>
+                <div class="optionsContainer" id="jsOptionCont">
+                  <div class="settingContainer">
+                    <i
+                      class="fa-solid fa-gear"
+                      id="jsCode_settingBtn"
+                      title="only js editor settings"
+                    ></i>
+                    <i class="fa-solid fa-chevron-down" id="jsCode_downBtn"></i>
+                    <div
+                      class="showOptions"
+                      style="display: none"
+                      id="jsCodeDown_showOptions_down"
+                    >
+                      <div class="innerCont">
+                        <div class="jsCodeOptionsDown checkBox" id="notepad_jsCode_Btn">
+                          <span>Notepad</span>
+                        </div>
+                        <div class="jsCodeOptionsDown" id="highlightJsCode_Btn">
+                          <span>Highlight</span>
+                        </div>
+                        <div
+                          class="jsCodeOptionsDown"
+                          id="expandJsEditorWindow_Btn"
+                        >
+                          <span>Expand</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="editWindow">
+                <div class="lineNumberContainer" id="jsLineNumberContainer">
+                  <div class="innerCont">
+                    <span>1</span>
+                  </div>
+                </div>
+                <textarea
+                  style="
+                    color: #9e9e9e;
+                    font-size: 0.9em;
+                    font-family: 'Courier New', Courier, monospace;
+                  "
+                  name="code"
+                  id="jsCode"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- result window -->
+      <div class="showOutput">
+        <iframe id="showOutPutFrame"></iframe>
+      </div>
+    </div>
+  </body>
+</html>

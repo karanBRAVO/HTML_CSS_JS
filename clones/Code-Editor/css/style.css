@@ -1,0 +1,909 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Tagbanwa&display=swap");
+/* font-family: 'Noto Sans Tagbanwa', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* font-family: 'Montserrat', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+/* font-family: 'Kanit', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+/* font-family: 'Fira Sans', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap");
+/* font-family: 'Hind Siliguri', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  user-select: none;
+  -moz-user-select: none;
+  background-color: #18122b;
+  overflow: hidden;
+}
+
+.fixedContainer {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(34, 34, 34, 0.451);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixedContainer .innerBox {
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  box-shadow: 0 0 8px #ffffff;
+  border-radius: 5px;
+  border: 2px solid #222;
+  padding: 4px 5px;
+  width: 85%;
+}
+
+.fixedContainer .innerBox .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff;
+}
+
+.fixedContainer .innerBox .header .nameCont {
+  padding: 4px;
+  margin: 1px 5px;
+}
+
+.fixedContainer .innerBox .header .nameCont h4 {
+  color: #ffffff;
+  font-family: "Hind Siliguri", sans-serif;
+  text-transform: none;
+  font-size: 1em;
+}
+
+.fixedContainer .innerBox .header .crossIconCont {
+  padding: 4px;
+  margin: 1px 5px;
+}
+
+.fixedContainer .innerBox .header .crossIconCont i {
+  color: #000000;
+  background: yellow;
+  border-radius: 3px;
+  border: 2px solid yellow;
+  padding: 3px 4px 2px 4px;
+  cursor: pointer;
+  font-size: 0.689em;
+}
+
+.fixedContainer .innerBox .shortcutContainer {
+  padding: 0.5px;
+  margin: 0.5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.fixedContainer .innerBox .shortcutContainer .options {
+  padding: 2.5px;
+  margin: 0 5px;
+}
+
+.fixedContainer .innerBox .shortcutContainer .options h4 {
+  position: relative;
+  border-radius: 8px;
+  border: 1.4px solid #ffffff;
+  width: fit-content;
+  padding: 1px 4px;
+  background-color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  text-transform: capitalize;
+  font-size: 0.76rem;
+}
+
+.fixedContainer .innerBox .shortcutContainer .options h5 {
+  position: relative;
+  margin-left: 5px;
+  font-family: "Kanit", sans-serif;
+  color: #ffffff;
+  text-transform: lowercase;
+  font-size: 0.6rem;
+}
+
+.fixedContainer .innerBox .mainContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.fixedContainer .innerBox .mainContainer .leftCont {
+  width: 25%;
+  border-right: 1px solid white;
+  padding: 2px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.fixedContainer .innerBox .mainContainer .leftCont::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.fixedContainer .innerBox .mainContainer .leftCont::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: gray;
+}
+
+.fixedContainer .innerBox .mainContainer .leftCont .items {
+  padding: 3px 2px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.fixedContainer .innerBox .mainContainer .leftCont .items h5 {
+  color: #9e9e9e;
+  font-family: "Fira Sans", sans-serif;
+  text-transform: capitalize;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 0.7em;
+}
+
+.active {
+  background-color: #ffffff2c;
+}
+
+.fixedContainer .innerBox .mainContainer .rightCont {
+  width: 75%;
+  padding: 5px;
+}
+
+.fixedContainer .innerBox .mainContainer .rightCont .changeNameCont,
+.fixedContainer .innerBox .mainContainer .rightCont .changeFontCont {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5px;
+}
+
+.fixedContainer .innerBox .mainContainer .rightCont .inputCont {
+  display: flex;
+  flex-direction: column;
+  margin: 2px;
+}
+
+.fixedContainer .innerBox .mainContainer .rightCont .inputCont label {
+  color: #ffffff;
+  font-family: "Fira Sans", sans-serif;
+  text-transform: capitalize;
+  font-size: 0.7em;
+}
+
+.fixedContainer
+  .innerBox
+  .mainContainer
+  .rightCont
+  .inputCont
+  input[type="text"] {
+  outline: none;
+  border: 2px solid #ffffff9b;
+  background-color: #222;
+  border-radius: 4px;
+  padding: 4px 5px;
+  margin: 3px;
+  font-family: "Kanit", sans-serif;
+  font-size: 0.8em;
+  color: yellow;
+}
+
+.fixedContainer
+  .innerBox
+  .mainContainer
+  .rightCont
+  .inputCont
+  input::placeholder {
+  color: rgba(255, 255, 0, 0.503);
+}
+
+.fixedContainer
+  .innerBox
+  .mainContainer
+  .rightCont
+  .inputCont
+  input[type="color"] {
+  margin: 3px;
+  border: 1px solid #222;
+  border-radius: 2px;
+  outline: none;
+  background-color: #ffffff9b;
+}
+
+.fixedContainer .innerBox .mainContainer .rightCont .inputCont select {
+  outline: none;
+  border: 2px solid #ffffff9b;
+  background-color: #222;
+  border-radius: 4px;
+  padding: 4px 5px;
+  margin: 3px;
+  color: yellow;
+}
+
+.fixedContainer .innerBox .mainContainer .rightCont .inputCont select option {
+  color: yellow;
+  font-size: 0.8em;
+  padding: 4px 5px;
+}
+
+.fixedContainer .innerBox .mainContainer .rightCont .buttonCont {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2px;
+  margin: 1px;
+}
+
+.fixedContainer .innerBox .mainContainer .rightCont .buttonCont button {
+  padding: 3px 5px;
+  cursor: pointer;
+  margin: 1px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+}
+
+.fixedContainer .innerBox .mainContainer .rightCont .buttonCont button span {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-size: 0.8em;
+}
+
+.drag-false {
+  -webkit-user-drag: none;
+}
+
+.Navbar {
+  background-color: #18122b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Navbar .leftContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Navbar .leftContainer .logoContainer {
+  padding: 2px;
+  margin: 1px;
+}
+
+.Navbar .leftContainer .logoContainer i {
+  font-size: 1.3em;
+  padding: 0.5px;
+  margin: 0.5px;
+  color: #ffffff;
+}
+
+.Navbar .leftContainer .nameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Navbar .leftContainer .nameContainer .headingContainer {
+  padding: 1px;
+  margin: 1px;
+}
+
+.Navbar .leftContainer .nameContainer .headingContainer .heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5px;
+  margin: 0.5px;
+}
+
+.Navbar .leftContainer .nameContainer .headingContainer .heading h2 {
+  font-family: "Noto Sans Tagbanwa", sans-serif;
+  font-size: 0.89em;
+  padding: 1px;
+  margin: 1px;
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.Navbar .leftContainer .nameContainer .headingContainer .heading i {
+  padding: 0 1px;
+  margin: 0 1px;
+  font-size: 1em;
+  transform-origin: center;
+  transition: all 0.25s;
+  color: #ffffff;
+}
+
+.Navbar .leftContainer .nameContainer .headingContainer .heading i:hover {
+  font-size: 1.3em;
+  transform: rotateZ(-20deg);
+}
+
+.Navbar .leftContainer .nameContainer .subheadingContainer {
+  padding: 0.5px;
+  margin: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Navbar .leftContainer .nameContainer .subheadingContainer .subheading {
+  padding: 1px;
+  margin: 1px;
+}
+
+.Navbar .leftContainer .nameContainer .subheadingContainer .subheading h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #f0eeedb8;
+  margin: 1px;
+  padding: 1px;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 0.7em;
+}
+
+.Navbar
+  .leftContainer
+  .nameContainer
+  .subheadingContainer
+  .subheading
+  h4:hover {
+  color: #ffffff;
+}
+
+.Navbar .rightContainer {
+  padding: 1px;
+  margin: 1px;
+}
+
+.Navbar .rightContainer .boxContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 1px;
+  margin: 0 1px;
+}
+
+.Navbar .rightContainer .boxContainer .buttonBox {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 6px 8px;
+  margin: 0 5px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  background-color: #18122b;
+  transition: all 0.2s;
+}
+
+.Navbar .rightContainer .boxContainer .buttonBox:hover {
+  background-color: #ffffff;
+  border-color: #18122b;
+}
+
+.Navbar .rightContainer .boxContainer .buttonBox .saveOptionsContainer {
+  position: absolute;
+  margin-top: 115px;
+  border: 1px solid #7a7a7a;
+  padding: 0.5px;
+  border-radius: 6px;
+  background-color: #565454;
+  z-index: 1;
+}
+
+.Navbar
+  .rightContainer
+  .boxContainer
+  .buttonBox
+  .saveOptionsContainer
+  .options {
+  padding: 2.5px;
+}
+
+.Navbar
+  .rightContainer
+  .boxContainer
+  .buttonBox
+  .saveOptionsContainer
+  .options:hover {
+  background-color: #7a7a7a;
+}
+
+.Navbar
+  .rightContainer
+  .boxContainer
+  .buttonBox
+  .saveOptionsContainer
+  .options
+  span {
+  color: #ffffff;
+  font-size: 0.6em;
+  font-family: "Noto Sans Tagbanwa", sans-serif;
+  text-transform: none;
+}
+
+.Navbar .rightContainer .boxContainer .buttonBox span {
+  font-family: "Kanit", sans-serif;
+  color: #ffffff;
+  padding: 0 0.5px;
+  margin: 0 0.5px;
+  text-transform: lowercase;
+  font-size: 0.8em;
+}
+
+.Navbar .rightContainer .boxContainer .buttonBox:hover span {
+  color: #18122b;
+}
+
+.Navbar .rightContainer .boxContainer .buttonBox i {
+  font-size: 0.9em;
+  padding: 4px 1px;
+  margin: 0 1px;
+  color: #ffffff;
+}
+
+#thumbTackDropDown_nav .showOptionsContainer {
+  position: absolute;
+  margin-top: 100px;
+  background-color: #252525;
+  border-radius: 5px;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ffffff9b;
+  transition: all 0.5s;
+  animation: slideDown 0.5s linear;
+}
+
+#thumbTackDropDown_nav .showOptionsContainer .box {
+  padding: 1px;
+}
+
+#thumbTackDropDown_nav .showOptionsContainer .box span {
+  color: #ffffff;
+  font-size: 0.8em;
+  font-family: "Montserrat", sans-serif;
+  text-transform: lowercase;
+}
+
+#thumbTackDropDown_nav .showOptionsContainer .box:hover {
+  background-color: #9e9e9e;
+  border-radius: 3px;
+}
+
+.Navbar .rightContainer .boxContainer .buttonBox:hover .hover {
+  color: #18122b;
+}
+
+.Navbar .rightContainer .boxContainer .buttonBox .layoutOptionsCont {
+  flex-direction: column;
+  align-items: center;
+  background-color: #9e9e9e;
+  position: absolute;
+  margin-top: 90px;
+  border-radius: 4px;
+  transition: all 0.5s;
+  animation: slideDown 0.5s linear;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.Navbar .rightContainer .boxContainer .buttonBox .layoutOptionsCont .heading {
+  padding: 4px 8px;
+  border-bottom: 1px solid #565454;
+}
+
+.Navbar .rightContainer .boxContainer .buttonBox .layoutOptionsCont .heading p {
+  color: #ffffff;
+  font-size: 0.7em;
+  text-transform: none;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.Navbar
+  .rightContainer
+  .boxContainer
+  .buttonBox
+  .layoutOptionsCont
+  .layoutOptions {
+  display: flex;
+  flex-direction: row;
+}
+
+.Navbar
+  .rightContainer
+  .boxContainer
+  .buttonBox
+  .layoutOptionsCont
+  .layoutOptions
+  i {
+  padding: 5px 5px;
+  color: #ffffff;
+  font-size: 0.8em;
+  transition: all 0.34s;
+}
+
+.rotate-90deg {
+  transform: rotateZ(90deg);
+}
+
+#editor_top:hover {
+  background-color: rgba(255, 255, 255, 0.537);
+  color: #000000;
+}
+
+.rotate-0deg {
+  transform: rotateZ(0deg);
+}
+
+#editor_left:hover {
+  background-color: rgba(255, 255, 255, 0.537);
+  color: #000000;
+}
+
+.rotate-180deg {
+  transform: rotateZ(180deg);
+}
+
+#editor_right:hover {
+  background-color: rgba(255, 255, 255, 0.537);
+  color: #000000;
+}
+
+#editorDiv {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.34s;
+}
+
+.editSec {
+  background-color: #18122b;
+  padding: 9px 0;
+  border-top: 1px solid #9e9e9e;
+  width: fit-content;
+}
+
+.window {
+  background-color: #18122b;
+  border-top: 1px solid #9e9e9e;
+  border-bottom: 1px solid #9e9e9e;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.window .editor {
+  display: flex;
+  flex-direction: row;
+  background-color: #18122b;
+  transition: all 0.34s;
+}
+
+.window .editor .editinCont {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #18122b;
+  margin: 0 9px;
+  border-right: 1px solid #9e9e9e;
+  border-left: 1px solid #9e9e9e;
+  border-bottom: none;
+  transition: all 0.5s;
+}
+
+.window .editor .editinCont .innerTopContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #9e9e9e;
+  transition: all 0.3s;
+}
+
+.window .editor .editinCont .innerTopContainer .name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #9e9e9e7e;
+  padding: 4px 4.5px;
+  transform-origin: top left;
+  transition: all 0.5s;
+}
+
+.window .editor .editinCont .innerTopContainer .name p {
+  color: black;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  padding: 0 1px;
+  margin: 0 1px;
+  font-family: "Fira Sans", sans-serif;
+  color: #f0eeedb8;
+  transition: all 0.25s;
+}
+
+.window .editor .editinCont .innerTopContainer .optionsContainer {
+  padding: 1px;
+  margin: 1px;
+}
+
+.window
+  .editor
+  .editinCont
+  .innerTopContainer
+  .optionsContainer
+  .settingContainer {
+  padding: 0 5px;
+  margin: 0 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.window
+  .editor
+  .editinCont
+  .innerTopContainer
+  .optionsContainer
+  .settingContainer
+  i {
+  padding: 3px 5.5px;
+  margin: 0 3px;
+  font-size: 0.567em;
+  border-radius: 2px;
+  border: 1px solid #bdcdd6;
+  background-color: #bdcdd6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.window .editor .editinCont .editWindow {
+  width: fit-content;
+}
+
+.window .editor .editinCont .editWindow textarea {
+  color: #9e9e9e;
+  font-size: 0.9em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  outline: none;
+  resize: none;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 20px;
+  padding-right: 0px;
+  background-color: #18122b;
+  border: none;
+  width: 266px;
+  height: 176px;
+}
+
+#jsCode {
+  padding-right: 10.5px;
+}
+
+.window .editor .editinCont .editWindow textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.window .editor .editinCont .editWindow textarea::-webkit-scrollbar-thumb {
+  background-color: #ffffff88;
+}
+
+.window .editor .editinCont .editWindow .lineNumberContainer {
+  border-right: 1px solid #9e9e9e;
+  padding: 2px;
+  width: fit-content;
+  position: absolute;
+  height: 178px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  scroll-behavior: auto;
+}
+
+.window
+  .editor
+  .editinCont
+  .editWindow
+  .lineNumberContainer::-webkit-scrollbar {
+  width: 0.5px;
+}
+
+.window .editor .editinCont .editWindow .lineNumberContainer .innerCont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  color: #9e9e9e;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  padding: 0 2px;
+  width: fit-content;
+}
+
+.window .editor .editinCont .editWindow .lineNumberContainer .innerCont span {
+  padding: 0;
+}
+
+.icons {
+  width: 15px;
+  height: auto;
+}
+
+.window
+  .editor
+  .editinCont
+  .innerTopContainer
+  .optionsContainer
+  .settingContainer
+  .showOptions {
+  position: absolute;
+  margin-top: 120px;
+  margin-right: 42.5px;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  padding: 2px;
+  transition: all 0.4s;
+}
+
+.window
+  .editor
+  .editinCont
+  .innerTopContainer
+  .optionsContainer
+  .settingContainer
+  .showOptions
+  .innerCont {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+
+.window
+  .editor
+  .editinCont
+  .innerTopContainer
+  .optionsContainer
+  .settingContainer
+  .showOptions
+  .innerCont
+  div {
+  margin: 1.5px 0;
+  padding: 0 2px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.window
+  .editor
+  .editinCont
+  .innerTopContainer
+  .optionsContainer
+  .settingContainer
+  .showOptions
+  .innerCont
+  .checkBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.window
+  .editor
+  .editinCont
+  .innerTopContainer
+  .optionsContainer
+  .settingContainer
+  .showOptions
+  .innerCont
+  .checkBox::after {
+  content: "";
+  position: relative;
+  width: 12px;
+  height: 5.5px;
+  border-bottom: 2px solid #222;
+  border-left: 2px solid #222;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  margin-left: 9px;
+  border-radius: 1px;
+}
+
+.window
+  .editor
+  .editinCont
+  .innerTopContainer
+  .optionsContainer
+  .settingContainer
+  .showOptions
+  .innerCont
+  .htmlCodeOptionsDown:hover {
+  background-color: #e95928;
+}
+
+.window
+  .editor
+  .editinCont
+  .innerTopContainer
+  .optionsContainer
+  .settingContainer
+  .showOptions
+  .innerCont
+  .cssCodeOptionsDown:hover {
+  background-color: #33a9dc;
+}
+
+.window
+  .editor
+  .editinCont
+  .innerTopContainer
+  .optionsContainer
+  .settingContainer
+  .showOptions
+  .innerCont
+  .jsCodeOptionsDown:hover {
+  background-color: #f7df1e;
+}
+
+.window
+  .editor
+  .editinCont
+  .innerTopContainer
+  .optionsContainer
+  .settingContainer
+  .showOptions
+  .innerCont
+  div
+  span {
+  color: #222;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  font-size: 0.8em;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.showOutput {
+  background-color: #ffffff;
+  border-bottom: 1px solid #18122b;
+  width: fit-content;
+  height: fit-content;
+}
+
+#showOutPutFrame {
+  background-color: #ffffff;
+  border: none;
+}

@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.ds {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cl-b {
+  border: 2px solid black;
+  background-color: black;
+}
+
+.mainContainer {
+  background: url(img/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.Navbar {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 3px;
+}
+
+.navDiv1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50vw;
+}
+
+.p {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.img_brand {
+  width: 36px;
+  height: 36px;
+  border: 2px solid white;
+  border-radius: 25px;
+  background: white;
+}
+
+.imgTp {
+  width: 30px;
+  margin: 0 3px;
+  border-radius: 32px;
+  background-color: white;
+}
+
+.navDiv2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}
+
+.li {
+  color: white;
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0 4px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.btn {
+  border: 2px solid white;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  font-family: serif;
+  margin: 2px;
+  padding: 2px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.container {
+  width: fit-content;
+  height: 65vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.songList {
+  display: flex;
+  flex-direction: column;
+  margin: 2px 0;
+  padding: 2px;
+  background-color: #5e616194;
+  width: fit-content;
+  border-radius: 4px;
+  box-shadow: 2px 3px 4px #000;
+}
+
+.songItems {
+  background-color: #ffffffb2;
+  ;
+  border-radius: 10px;
+  border: 2px solid white;
+  width: fit-content;
+  padding: 1px 4px;
+  margin: 4px;
+  letter-spacing: 1px;
+  font-family: serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImg {
+  border-radius: 30px;
+  border: 2px solid black;
+  width: 31px;
+  height: 35px;
+  background-color: #000;
+  margin-right: 6px;
+}
+
+.playBar {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 124px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.fa-icons {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.wd {
+  width: 100%;
+  margin-top: 5px;
+  height: 3px;
+}
+
+.beatImg {
+  position: absolute;
+  margin: 36px 0px;
+  height: 89px;
+  width: 505px;
+  visibility: hidden;
+}
+
+.favImg {
+  color: white;
+  cursor: pointer;
+  margin: 0 3px;
+  border: 2px solid white;
+  background-color: white;
+  visibility: visible;
+  border-radius: 32px;
+  width: 10px;
+  padding: 1px;
+}
+.wdP {
+  width: 11px;
+}

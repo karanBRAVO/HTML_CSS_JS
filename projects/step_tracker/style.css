@@ -1,0 +1,361 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+	list-style-type: none;
+}
+
+body {
+	background: white;
+}
+
+#hiddenLayer {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #0000;
+	display: none;
+}
+
+nav {
+	padding: 10px 20px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+nav .nameContainer {
+  padding: 2px;
+  margin: 1px;
+  text-align: center;
+}
+
+nav .nameContainer .name {
+	padding: 3px;
+	margin: 1px;
+}
+
+nav .nameContainer .name h1 {
+	font-weight: 800;
+	font-size: 2em;
+	color: black;
+	font-family: serif;
+	text-transform: capitalize;
+}
+
+nav .optionsContainer {
+	padding: 2px;
+  margin: 1px;
+}
+
+nav .optionsContainer .imgContainer {
+	padding: 3px;
+	margin: 1px;
+	cursor: pointer;
+}
+
+nav .optionsContainer .imgContainer img {
+	width: 45px;
+	height: 40px;
+}
+
+nav .optionsContainer .options {
+	position: absolute;
+	border-radius: 3px;
+	border: 1px solid black;
+	right: 24px;
+	margin: 5px;
+	background: white;
+	padding: 2.5px;
+	display: none;
+	transition: all 1s;
+}
+
+nav .optionsContainer .options .options_innerCont {
+	padding: 2px;
+	margin: 1px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+nav .optionsContainer .options .options_innerCont:hover {
+	background: linear-gradient(#ff8300ad, #ff9e57b8, #ffd1a9bd);
+}
+
+nav .optionsContainer .options .options_innerCont .option {
+	padding: 2px;
+	margin: 1px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+nav .optionsContainer .options .options_innerCont .option .option_optionIcon {
+	padding: 0 3px;
+	margin: 0 1px;
+}
+
+nav .optionsContainer .options .options_innerCont .option .option_optionIcon img {
+	width: 10px;
+	height: 10px;
+}
+
+nav .optionsContainer .options .options_innerCont .option .option_optionName {
+	padding: 0 2px;
+	margin: 0 2px;
+}
+
+nav .optionsContainer .options .options_innerCont .option .option_optionName h4 {
+	color: black;
+	font-size: 0.8em;
+	font-weight: 600;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	font-family: sans-serif;
+}
+
+.mainContainer {
+	padding: 20px;
+	margin: 1px;
+	width: 100%;
+}
+
+.mainContainer .linksContainer {
+	margin: 1px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	border-bottom: 3.4px solid #8686864f;
+}
+
+.mainContainer .linksContainer .links {
+	padding: 2px;
+	margin: 1px;
+	cursor: pointer;
+}
+
+.mainContainer .linksContainer .links .links_linksInnerCont {
+	padding: 1px;
+	margin: 0.5px;
+}
+
+.mainContainer .linksContainer .links .links_linksInnerCont .links_linkName {
+	padding: 0.5px;
+	margin: 0.5px;
+}
+
+.mainContainer .linksContainer .links .links_linksInnerCont .links_linkName span {
+	text-transform: capitalize;
+	font-family: monospace;
+	font-weight: 500;
+	font-size: 1.4em;
+}
+
+.activeLinkCont {
+	border-bottom: 2px solid red;
+}
+
+.activeLink {
+	color: red;
+}
+
+.mainContainer .graphContainer {
+	padding: 10px;
+	margin: 5px;
+}
+
+.mainContainer .graphContainer .graph {
+	padding: 10px 30px;
+	margin: 4px;
+	height: 57vh;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	border: 1px solid #8080802b;
+}
+
+.mainContainer .graphContainer .graph div {
+	width: 2px;
+	height: 91%;
+	background: #8080802b;
+}
+
+.mainContainer .graphContainer .layer {
+	margin: 4px;
+	width: 94.3%;
+	height: 57vh;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+}
+
+.mainContainer .graphContainer .layer .layer_topCont {
+	width: 100%;
+	height: 93%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: flex-start;
+	padding: 0 15px;
+	overflow: auto;
+}
+
+.bars {
+	background: linear-gradient(#ff6c00, #ffc65c);
+	width: 50px;
+	border-radius: 3px;
+	margin: 0 6px;
+	padding: 0 6px;
+}
+
+.mainContainer .graphContainer .layer .layer_bottomCont {
+	width: 100%;
+	height: 7%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 15px;
+	overflow: auto;
+}
+
+.dates {
+	width: 50px;
+	color: black;
+	font-family: sans-serif;
+	font-weight: 500;
+	margin: 0 6px;
+	padding: 0 3px;
+}
+
+.mainContainer .infoContainer {
+	padding: 5px;
+	margin: 5px;
+	border: 2px solid white;
+}
+
+.mainContainer .infoContainer .info {
+	padding: 5px;
+	margin: 3px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.mainContainer .infoContainer .info .box {
+	display: flex;
+	flex-direction: column;
+}
+
+.mainContainer .infoContainer .info .box .topBox {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 3px;
+	margin: 1px;
+}
+
+.mainContainer .infoContainer .info .box .topBox div {
+	padding: 0 2px;
+	margin: 0 2px;
+}
+
+.mainContainer .infoContainer .info .box .topBox div span {
+	color: black;
+	font-size: 1.7em;
+	font-family: sans-serif;
+	font-weight: 900;
+}
+
+.mainContainer .infoContainer .info .box .topBox div sub {
+	font-family: sans-serif;
+	color: black;
+	font-weight: 500;
+}
+
+.mainContainer .infoContainer .info .box .bottomBox {
+	padding: 2px;
+	margin: 1px;
+}
+
+.mainContainer .infoContainer .info .box .bottomBox div {
+	padding: 0.5px;
+	margin: 0.5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mainContainer .infoContainer .info .box .bottomBox div h3 {
+	color: black;
+	font-size: 1em;
+	font-family: sans-serif;
+	font-weight: 600;
+}
+
+.mainContainer .lastContainer {
+	padding: 6.5px;
+	margin: 6.5px;
+	border: 2px solid white;
+	display: flex;
+	flex-direction: column;
+}
+
+.mainContainer .lastContainer .lastCont_topContainer {
+	padding: 5px;
+	margin: 5px;
+}
+
+.mainContainer .lastContainer .lastCont_topContainer .headingContainer {
+	padding: 3px;
+	margin: 3px;
+}
+
+.mainContainer .lastContainer .lastCont_topContainer .headingContainer h4 {
+	font-family: sans-serif;
+	color: black;
+	font-weight: 600;
+}
+
+.mainContainer .lastContainer .lastCont_bottomContainer {
+	padding: 5px;
+	margin: 2px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.mainContainer .lastContainer .lastCont_bottomContainer .lastCont_container {
+	padding: 2px;
+	margin: 2px;
+}
+
+.mainContainer .lastContainer .lastCont_bottomContainer .lastCont_container .container {
+	padding: 2px;
+	margin: 2px;
+}
+
+
+.mainContainer .lastContainer .lastCont_bottomContainer .lastCont_container .container span {
+	color: black;
+	font-family: sans-serif;
+	font-weight: 600;
+}
+
+.mainContainer .lastContainer .lastCont_bottomContainer .lastCont_container .container sub {
+	color: black;
+	font-family: sans-serif;
+	font-weight: 500;
+	padding: 0.5px;
+}

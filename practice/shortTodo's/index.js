@@ -1,124 +1,68 @@
 console.log("Short Todo's");
 
-const showTodosCont = document.getElementById("showTodos");
 const todoInp = document.getElementById("todoInp");
-const firstTodo = document.getElementById("firstTodo");
-const one = document.getElementById("one");
-const two = document.getElementById("two");
-const three = document.getElementById("three");
-const four = document.getElementById("four");
-const five = document.getElementById("five");
+const todoCont = document.getElementById("showTodos");
 
-todoInp.onfocus = function removePlaceholder() {
-    todoInp.placeholder = '';
-}
-todoInp.onblur = function setPlaceholder() {
-    todoInp.placeholder = 'what to add in todo list...';
+function addTodo(text) {
+  let para = document.createElement("p");
+  para.innerHTML = text;
+  todoCont.append(para);
 }
 
-// localStorage.setItem('id', 0);
-
-var id = Number(localStorage.getItem('id'));
-
-todoInp.addEventListener('keyup', storeTodo);
-
-function storeTodo(event) {
-    let keyName = event.key;
-    let vals = todoInp.value;
-
-    if (keyName === 'Enter') {
-        if (vals.length > 0) {
-            if (id < 5) {
-                id++;
-                localStorage.setItem('id', id);
-                localStorage.setItem(`${id}`, vals);
-                todoInp.value = '';
-            }
-            else if (id >= 5) {
-                todoInp.value = '';
-            }
-
+function showTodos() {
+  let count = Number(localStorage.getItem("count"));
+  if (count == null) {
+    localStorage.setItem("count", 0);
+    location.reload();
+  } else {
+    if (count == 0) {
+      addTodo("Nothing to show | add your first todo");
+    } else {
+      todoCont.innerHTML = "";
+      addTodo("Your TODO's");
+      for (let i = 0; i < count; i++) {
+        let myTodo = localStorage.getItem(`todo_${i + 1}`);
+        if (myTodo != null) {
+          addTodo(`(id:${i + 1}) ${myTodo}`);
         }
+      }
     }
+  }
 }
 
-function showTodo() {
-    if (id === 0) {
-        // when no todo is added
-        firstTodo.innerText = "! Nothing to show add 5 todos";
-        one.innerText = `todo_1:`;
-        two.innerText = `todo_2:`;
-        three.innerText = `todo_3:`;
-        four.innerText = `todo_4:`;
-        five.innerText = `todo_5:`;
-    }
-    else if (id > 0) {
-        firstTodo.innerText = "Your Todo's";
-        // showing todo added bu user
-        if (localStorage.getItem(`${1}`) != null) {
-            one.innerText = `${localStorage.getItem(`${1}`)}`;
-        }
-        else {
-            one.innerText = 'todo_1:';
-        }
-        if (localStorage.getItem(`${2}`) != null) {
-            two.innerText = `${localStorage.getItem(`${2}`)}`;
-        }
-        else {
-            two.innerText = 'todo_2:';
-        }
-        if (localStorage.getItem(`${3}`) != null) {
-            three.innerText = `${localStorage.getItem(`${3}`)}`;
-        }
-        else {
-            three.innerText = 'todo_3:';
-        }
-        if (localStorage.getItem(`${4}`) != null) {
-            four.innerText = `${localStorage.getItem(`${4}`)}`;
-        }
-        else {
-            four.innerText = 'todo_4:';
-        }
-        if (localStorage.getItem(`${5}`) != null) {
-            five.innerText = `${localStorage.getItem(`${5}`)}`;
-        }
-        else {
-            five.innerText = 'todo_5:';
-        }
-    }
-}
+showTodos();
 
-setInterval(showTodo, 1);
-
-document.addEventListener('keydown', (event)=> {
-    let keyName = event.key;
-    let ctrlKey_isPressed = event.ctrlKey;
-
-    if (ctrlKey_isPressed === true) {
-        if (keyName === '1') {
-            id--;
-            localStorage.setItem('id', id);
-            localStorage.removeItem(`${1}`);
-        }
-        else if (keyName === '2') {
-            id--;
-            localStorage.setItem('id', id);
-            localStorage.removeItem(`${2}`);
-        }
-        else if (keyName === '3') {
-            id--;
-            localStorage.setItem('id', id);
-            localStorage.removeItem(`${3}`);
-        }
-        else if (keyName === '4') {
-            id--;
-            localStorage.setItem('id', id);
-            localStorage.removeItem(`${4}`);
-        }
-        else if (keyName === '5') {
-            id--;
-            localStorage.setItem('id', id);
-            localStorage.removeItem(`${5}`);
-        }
+todoInp.addEventListener("keydown", (e) => {
+  let keyName = e.key;
+  if (keyName == "Enter") {
+    let myTodo = String(todoInp.value);
+    todoInp.value = "";
+    if (myTodo.length > 0) {
+      let count = Number(localStorage.getItem("count"));
+      localStorage.setItem("count", count + 1);
+      localStorage.setItem(`todo_${count + 1}`, myTodo);
+      showTodos();
+    } else {
+      alert("Type some todo");
     }
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  let keyName = e.key;
+  if (keyName == "Delete") {
+    let id = prompt("Enter id:");
+    if (id != null && id.length > 0 && Number(id) != NaN) {
+      localStorage.removeItem(`todo_${id}`);
+      location.reload();
+    }
+  }
+
+  let ctrl_key_status = e.ctrlKey;
+  if (ctrl_key_status) {
+    if (keyName == "c") {
+      localStorage.clear();
+      location.reload();
+    }
+  }
 });

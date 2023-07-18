@@ -89,6 +89,8 @@
     margin: 2.5px;
     padding: 5px;
     border-radius: 3px;
+    overflow: auto;
+    max-height: 55vh;
 }
 
 .todos p {

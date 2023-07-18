@@ -13,7 +13,7 @@
                              code-editor               tic-tac-toe              animated-text             short-notes
                              converter                                          animation(Exercises)      sorting-visualizer
                              google sign-in page                                calculator                step-tracker
-                                                                                canvas                    tonify-song(music player)
+                             www.google.com                                     canvas                    tonify-song(music player)
                                                                                 canvas-practice           typing-test
                                                                                 countdown                 student record management system
                                                                                 dictionary-app
